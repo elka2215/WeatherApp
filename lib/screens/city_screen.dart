@@ -48,20 +48,19 @@ class _CityScreenState extends State<CityScreen> {
                 ),
               ),
               ElevatedButton(
-                child: const Text(
-                  "Search",
-                  style: TextStyle(fontSize: 30, color: Colors.black87),
-                ),
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                  ),
-                ),
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    side: BorderSide(width: 2, color: Colors.black87),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    )),
                 onPressed: () {
                   Navigator.pop(context, cityName);
                 },
+                child: Text(
+                  "Search",
+                  style: TextStyle(color: Colors.black, fontSize: 30),
+                ),
               ),
             ],
           ),
